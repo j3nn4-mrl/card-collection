@@ -1,0 +1,146 @@
+:root {
+  --primary-color: #f4c542; 
+  --secondary-color: #ff6961;
+  --text-color: #4e4e4e; 
+  --bg-color: #f9f3e3; 
+  --ocean-blue: #4a90e2; 
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  height: 80px; 
+}
+
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+header {
+  display: flex;                
+  justify-content: center;      
+  align-items: center;          
+  padding: 1rem 0;              
+  width: 100%;                 
+}
+
+header {
+  background-color: var(--ocean-blue);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4a90e2 30%, #4a90e2 80%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+.cta-button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.search-input {
+  padding: 0.8rem 1.2rem;
+  width: 50%;
+  border-radius: 25px;
+  border: 1px solid var(--ocean-blue);
+  outline: none;
+  background-color: white;
+  color: var(--text-color);
+}
+.sort-select {
+  padding: 0.8rem 1.2rem;
+  border-radius: 25px;
+  border: 1px solid var(--ocean-blue);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container-cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.carte {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--ocean-blue);
+}
+.carte:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--secondary-color); 
+}
+
+.carte-image img {
+  width: 100%;
+  border-bottom: 3px solid var(--primary-color); 
+}
+
+.carte-info {
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.carte-info h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+.carte-info p {
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+.carte-info .description {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f4c542;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .search-input {
+      width: 80%;
+  }
+}
